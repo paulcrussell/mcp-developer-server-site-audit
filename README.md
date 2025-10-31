@@ -29,10 +29,20 @@ You don't need to know about all 10,000 products, but you do need to know about 
 
 ## Installation
 
+### Local Installation
+
 ```bash
 npm install
 npm run build
 ```
+
+### Docker Deployment
+
+This server can be deployed to Google Cloud Platform (GCP) Cloud Run as a containerized service. See [DOCKER-DEPLOYMENT.md](./DOCKER-DEPLOYMENT.md) for detailed instructions on:
+- Building Docker images
+- Manual GCP Cloud Run deployment
+- Automated deployment with GitHub Actions
+- Configuration and monitoring
 
 ## Usage
 
