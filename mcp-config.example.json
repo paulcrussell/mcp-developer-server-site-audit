@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "site-audit": {
+      "command": "node",
+      "args": [
+        "/absolute/path/to/mcp-developer-server-site-audit/dist/index.js"
+      ],
+      "env": {}
+    }
+  }
+}
