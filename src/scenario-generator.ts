@@ -169,7 +169,7 @@ export class ScenarioGenerator {
       },
       {
         action: CrawlAction.EXTRACT,
-        selector: '[class*="add-to-cart"], button:contains("Add")',
+        selector: '[class*="add-to-cart"], [class*="addToCart"], button',
         description: 'Verify add to cart button exists'
       }
     ];

@@ -165,7 +165,9 @@ export class SiteCrawler {
    */
   private isProductDetailPage($: cheerio.CheerioAPI): boolean {
     const indicators = [
-      $('[class*="add-to-cart"], [class*="addToCart"], button:contains("Add to Cart")').length > 0,
+      $('[class*="add-to-cart"], [class*="addToCart"], button').filter((_, el) => 
+        $(el).text().toLowerCase().includes('add') && $(el).text().toLowerCase().includes('cart')
+      ).length > 0,
       $('[class*="product-title"], [class*="productTitle"], h1[class*="product"]').length > 0,
       $('[class*="product-image"], [class*="productImage"], .product-gallery').length > 0,
       $('[class*="price"]').length > 0 && $('[class*="price"]').length < 10,
