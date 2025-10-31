@@ -18,7 +18,9 @@ This guide explains how to containerize and deploy the MCP Site Audit Server to 
 
 ## Building the Docker Image Locally
 
-1. **Build the TypeScript code first:**
+**Important**: Install node_modules before building the Docker image:
+
+1. **Build the TypeScript code and install dependencies:**
    ```bash
    npm install
    npm run build
@@ -28,6 +30,8 @@ This guide explains how to containerize and deploy the MCP Site Audit Server to 
    ```bash
    docker build -t mcp-site-audit:latest .
    ```
+
+   Note: The Dockerfile copies the pre-built `node_modules` and `dist` directories into the container. This approach is used to avoid certificate issues in sandboxed build environments.
 
 3. **Run the container locally:**
    ```bash

@@ -4,11 +4,10 @@ FROM node:20-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package files
+# Copy package files and node_modules
+# Note: Build node_modules locally before building the container
 COPY package*.json ./
-
-# Install production dependencies only
-RUN npm ci --only=production
+COPY node_modules ./node_modules
 
 # Copy built files
 COPY dist ./dist
