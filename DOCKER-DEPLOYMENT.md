@@ -117,9 +117,6 @@ This repository includes a GitHub Actions workflow (`.github/workflows/deploy-cl
 
 2. **Grant necessary permissions:**
    ```bash
-   # Get your project number
-   PROJECT_NUMBER=$(gcloud projects describe YOUR_PROJECT_ID --format="value(projectNumber)")
-   
    # Grant Cloud Run Admin role
    gcloud projects add-iam-policy-binding YOUR_PROJECT_ID \
      --member="serviceAccount:github-actions@YOUR_PROJECT_ID.iam.gserviceaccount.com" \

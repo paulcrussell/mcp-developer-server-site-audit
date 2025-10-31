@@ -1,11 +1,6 @@
 npm-debug.log
 .git
 .gitignore
-README.md
-EXAMPLES.md
-ARCHITECTURE.md
-PROJECT-SUMMARY.md
-TROUBLESHOOTING.md
 *.md
 .DS_Store
 .env
