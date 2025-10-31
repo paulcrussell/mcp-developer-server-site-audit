@@ -16,7 +16,7 @@ import {
 
 import { SiteCrawler } from './crawler.js';
 import { ScenarioGenerator } from './scenario-generator.js';
-import { SiteStructure, PageTemplateType } from './types.js';
+import { SiteStructure } from './types.js';
 
 /**
  * MCP Server for site auditing
