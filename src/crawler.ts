@@ -342,7 +342,7 @@ export class SiteCrawler {
       if (response.ok) {
         return await response.text();
       }
-    } catch (error) {
+    } catch (_error) {
       // Ignore errors
     }
     return undefined;

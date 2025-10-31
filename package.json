@@ -9,7 +9,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepare": "husky",
     "watch": "tsc --watch",
     "dev": "node --watch dist/index.js"
   },
@@ -29,6 +31,10 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^9.38.0",
+    "husky": "^9.1.7",
     "typescript": "^5.7.2"
   }
 }

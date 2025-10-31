@@ -8,7 +8,6 @@ import {
   CrawlAction,
   PageTemplateType,
   SiteStructure,
-  SiteEntity,
   EntityType
 } from './types.js';
 

@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Get the current branch name
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+# Prevent committing to main
+if [ "$branch" = "main" ]; then
+  echo "❌ Direct commits to main branch are forbidden!"
+  echo "Please create a feature branch and submit a pull request."
+  exit 1
+fi
+
+exit 0
